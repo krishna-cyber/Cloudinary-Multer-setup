@@ -2,7 +2,9 @@
 
 # File upload with Multer and Express
 
-The purpose of this project is to show how to upload files with Multer and Express.
+The purpose of this project is to show how to upload files with Multer and Express using functions.
+
+In this project we create two function for single and multiple file upload named `singleUpload` and `multiUpload` respectively at `middleware/multerUpload.js` file.
 
 ## Description
 
@@ -44,6 +46,8 @@ npm install -g nodemon
 ## Api Endpoints
 
 - `POST /upload` - Upload a single file
+
+- `POST /uploadMultiple` - Upload multiple files
 
 `Note: The form field name of file should be 'image'.` <br>
 `form type: multipart/form-data`
