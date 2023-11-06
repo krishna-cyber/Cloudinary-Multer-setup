@@ -45,6 +45,8 @@ npm install -g nodemon
 
 - `POST /upload` - Upload a single file
 
+- `POST /uploadMultiple` - Upload multiple files
+
 `Note: The form field name of file should be 'image'.` <br>
 `form type: multipart/form-data`
 
