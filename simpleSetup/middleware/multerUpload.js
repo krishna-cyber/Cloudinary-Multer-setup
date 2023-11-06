@@ -1,11 +1,11 @@
 /** @format */
 
 const multer = require("multer");
-const path = require("path");
+const path = require("path"); // path is a core module of Node.js and does not need to be installed
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "./uploads"));
+    cb(null, path.join(__dirname, "./uploads")); // __dirname is a global variable that contains the absolute path of the current directory
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);
@@ -14,16 +14,4 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-//make this upload as middleware for cloudinary uploads also and delete the file after uploaded successfully
-
-function uploadSingleFile(req, res, next) {
-  upload.single("image")(req, res, (err) => {
-    if (err) {
-      return res.status(400).json({ message: err.message });
-    }
-    console.log(req.file);
-    next();
-  });
-}
-
-module.exports = uploadSingleFile;
+module.exports = upload; // export the upload object to be used in server.js

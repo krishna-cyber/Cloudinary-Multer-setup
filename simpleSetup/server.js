@@ -1,7 +1,7 @@
 /** @format */
 
 const express = require("express");
-const uploadSingleFile = require("./middleware/multerUpload");
+const upload = require("./middleware/multerUpload");
 
 const app = express();
 
@@ -12,7 +12,9 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
-app.post("/upload", uploadSingleFile, (req, res) => {
+// Image is the name of the upload filed in the form
+
+app.post("/upload", upload.single("image"), (req, res) => {
   res.send("File uploaded");
 });
 
