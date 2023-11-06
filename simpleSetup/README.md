@@ -8,6 +8,10 @@ The purpose of this project is to show how to upload files with Multer and Expre
 
 This is a simple example of how to upload files with Multer and Express.
 
+```bash
+Single file upload process is shown in this project.
+```
+
 ## Getting Started
 
 ### Dependencies
@@ -20,6 +24,8 @@ This is a simple example of how to upload files with Multer and Express.
 
 - Clone the repository
 - Run `npm install` to install the dependencies
+
+`You can check and edit the code according to your needs.`
 
 ### Executing program
 
@@ -39,7 +45,7 @@ npm install -g nodemon
 
 - `POST /upload` - Upload a single file
 
-`Note: The form field name should be 'image' && The file size should be less than 1MB.` <br>
+`Note: The form field name of file should be 'image'.` <br>
 `form type: multipart/form-data`
 
 ## Help
