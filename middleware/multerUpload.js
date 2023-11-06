@@ -14,4 +14,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-module.exports = upload;
+//make this upload as middleware for cloudinary uploads also and delete the file after uploaded successfully
+
+function uploadSingleFile(req, res, next) {
+  upload.single("image")(req, res, (err) => {
+    if (err) {
+      return res.status(400).json({ message: err.message });
+    }
+    console.log(req.file);
+    next();
+  });
+}
+
+module.exports = uploadSingleFile;
