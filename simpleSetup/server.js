@@ -18,6 +18,11 @@ app.post("/upload", upload.single("image"), (req, res) => {
   res.send("File uploaded");
 });
 
+//route for multiple files upload and count is 3 in this case
+app.post("/uploadMultiple", upload.array("images", 3), (req, res) => {
+  res.send("Multiple files uploaded");
+});
+
 app.on("error", (err) => {
   console.error(err);
 });

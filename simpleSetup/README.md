@@ -9,7 +9,7 @@ The purpose of this project is to show how to upload files with Multer and Expre
 This is a simple example of how to upload files with Multer and Express.
 
 ```bash
-Single file upload process is shown in this project.
+Single and multiple file upload process is shown in this project.
 ```
 
 ## Getting Started
